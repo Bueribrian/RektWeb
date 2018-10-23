@@ -10,7 +10,9 @@ window.onload = function() {
   
   //NAVBAR
   btnNav.addEventListener("click", function() {
+    
     navBarMenu.style.transform = "translateX(0%)";
+    
   });
   exitNavBtn.addEventListener("click", function() {
     navBarMenu.style.transform = "translateX(102%)";
@@ -23,7 +25,7 @@ window.onload = function() {
   portfolios.addEventListener("click", getPortfolios);
   setTimeout(function(){
       alert( `Bienvenido \nEsta web esta hecha solo como practica, la informacion y contenido no tiene ninguna validez ni sentido dentro de la misma,gracias por visitarla`
-      )},3000)
+      )},1000)
 };
 
 
@@ -54,6 +56,10 @@ var responseOutput = function(response, i) {
   gallery.innerHTML += ouput;
 };
 var getWebDesing = function() {
+  webDesing.classList.add('checked')
+  mobile.classList.remove('checked')
+  webApps.classList.remove('checked')
+  portfolios.classList.remove('checked')
   gallery.innerHTML = "";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -71,6 +77,10 @@ var getWebDesing = function() {
 };
 
 var getMobile = function() {
+  webDesing.classList.remove('checked')
+  mobile.classList.add('checked')
+  webApps.classList.remove('checked')
+  portfolios.classList.remove('checked')
   gallery.innerHTML = "";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -89,6 +99,10 @@ var getMobile = function() {
 };
 
 var getWebApps = function() {
+  webDesing.classList.remove('checked')
+  mobile.classList.remove('checked')
+  webApps.classList.add('checked')
+  portfolios.classList.remove('checked')
   gallery.innerHTML = "";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -107,6 +121,10 @@ var getWebApps = function() {
   xhttp.send();
 };
 var getPortfolios = function() {
+  webDesing.classList.remove('checked')
+  mobile.classList.remove('checked')
+  webApps.classList.remove('checked')
+  portfolios.classList.add('checked')
   gallery.innerHTML = "";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
