@@ -12,9 +12,9 @@ body{
 .container{
     width: 70%;
     margin: 0px auto;
-}
+} 
 
-@media screen and (max-width:900px){
+ @media screen and (max-width:900px){
     .container{
         width: 80%;
     }
@@ -23,15 +23,16 @@ body{
     .container{
         width: 90%;
     }
-}
-/* @media screen and (max-width:720px){
+} 
+ @media screen and (max-width:720px){
     .container{
         width: 90%;
     }
-} */
+}
 
 body{
     font-family: var(--font-secondary);
+    
 }
 h1{
     font-size: 2rem;
@@ -125,7 +126,7 @@ a{
 #header{
 width: 100%;
 height: 100vh;
-background: var(--primary-color) url(https://images.pexels.com/photos/205316/pexels-photo-205316.png?auto=compress&cs=tinysrgb&h=750&w=1260);
+background: var(--primary-color) url(https://images.pexels.com/photos/293333/pexels-photo-293333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -618,17 +619,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     .item-sectionC:nth-child(2) .item-img{order: 1;margin-right: 0rem;}
     .item-sectionC .item-img{width: 100%; margin: 15px auto;}
 }
-#sectorD{
-    background: url(../images/bg-header.jpeg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 800px;
-    width: 100%;
-   
-}
+
 #sectorE{
-    padding: 5rem 0px;
+    padding: 1rem 0px;
 }
 #sectorE-title{
     font-size: 2.5rem;
@@ -643,20 +636,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 }
 #team{
     width: 90%;
-    margin: 1rem auto;
-    display: grid;
-    grid-auto-columns:3fr;
-    grid-gap: 200px;
-    grid-auto-rows: minmax(350px);
+    margin: 0rem auto;
+    display: flex;
+    justify-content: space-around;
 }
 .member{
-    width: 33%;
+    width: 30%;
     cursor: pointer;
 }
 
 .img-member {
     width: 100%;
-    height: 90%;
+    height:60%;
     overflow: hidden;
 }
 .img-member img{
@@ -664,7 +655,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     height: 100%;
 }
 .member-content{
-    background: rgb(189, 189, 189);
+    background: rgb(56, 53, 53);
     border-top: none;
     overflow: hidden;
     padding: 1rem;
@@ -680,6 +671,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
 .member-position{
     margin-bottom: 1rem;
 }
+.social-media-member{
+    display: flex;
+    justify-content: space-around;
+}
 .social-media-member i:first-child{
         padding: 1rem 1.2rem;
     
@@ -688,7 +683,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     padding: 1rem .8rem;
 }
 .social-media-member i{
-   margin:.5rem 1rem;
+   margin:.2rem 1rem;
    padding: 1rem;
    border:1px solid black;;
    border-radius: 27px;
@@ -731,16 +726,268 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
  }
 
 
- @media screen and (max-width:480px){
-     #team{
-         flex-wrap: wrap;
-         width: 100%;
-     }
-     .member{
-         width: 100%;
-         padding: 1rem 0px;
-     }
-     .social-media-member i{
-        margin:.1rem .1rem;
-     }
- }
+ 
+
+@media screen and (max-width:950px){
+    #team{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .member{
+        width: 45%;
+        padding: 1rem 0px;
+    }
+    .social-media-member i{
+       margin:10px;
+    }
+}
+@media screen and (max-width:720px){
+    #team{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .member{
+        width: 70%;
+        padding: 1rem 0px;
+    }
+    .social-media-member i{
+       margin:10px;
+    }
+}
+@media screen and (max-width:480px){
+    #team{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .member{
+        width: 95%;
+        padding: 1rem 0px;
+    }
+    .social-media-member i{
+       margin:10px;
+    }
+}
+
+#sectorF{
+    width: 100%;
+    min-height: 700px;
+    background: url(../images/bg-header.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#sectorF .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 2rem;
+    background: white;
+}
+#sectionF-title{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+#reviews{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@keyframes comeIn {
+    0%{
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+}
+.review{
+    width: 70%;
+    min-height: 250px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 40px;
+    background: linear-gradient(var(--primary-color),var(--secondary-color));
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    color: white;
+    margin:0px auto;
+    animation: .5s comeIn linear;
+    margin-bottom: 1rem;
+}
+#rev-2{
+    display: none;
+    background: linear-gradient(var(--secondary-color),var(--tercery-color));
+}
+#rev-3{
+    display: none;
+    background: linear-gradient(var(--secondary-color),var(--primary-color));
+}
+.reviews-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.reviews-links ul{
+    display: flex;
+}
+.reviews-links li{
+   background: black;
+   width: 10px;
+   height: 10px;
+   border: 1px solid gray;
+   border-radius: 27px;
+   margin: 0px 5px;
+   cursor: pointer;
+}
+.star{
+    color: rgb(218, 218, 33);
+}
+.review-img{
+    overflow: hidden;
+    border-radius:50px;
+    width: 100px;
+    height: 100px;
+}
+.review-img img{
+    width: 100%;
+}
+.review-name{
+    width: 70%;
+    text-align: left;
+    padding: 1.2rem;
+}
+.review-desc{
+    width: 100%;
+    padding: .5rem 5rem;
+}
+.review-points{
+    width: 90%;
+    margin: 1rem auto;
+}
+@media screen and (max-width:950px){
+    #sectionF-title{
+        text-align: center;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+    }
+    .review{
+        width: 80%;
+        min-height: 250px;
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 30px;
+        background: linear-gradient(var(--primary-color),var(--secondary-color));
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        color: white;
+        margin:0px auto;
+        animation: .5s comeIn linear;
+        margin-bottom: 1rem;
+    }
+    .review-name{
+        width: 70%;
+        text-align: left;
+        line-height: 50px;
+    }
+    .review-desc{
+        width: 100%;
+        padding: .5rem 1rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: .9rem;
+    }
+    .review-points{
+        width: 90%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width:750px){
+    #sectionF-title{
+        text-align: center;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+    }
+    .review{
+        width: 80%;
+        min-height: 250px;
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 30px;
+        background: linear-gradient(var(--primary-color),var(--secondary-color));
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        color: white;
+        margin:0px auto;
+        animation: .5s comeIn linear;
+        margin-bottom: 1rem;
+    }
+    .review-name{
+        width: 50%;
+        text-align: left;
+        line-height: 50px;
+    }
+    .review-desc{
+        width: 100%;
+        padding: .5rem 1rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: .9rem;
+    }
+    .review-points{
+        width: 90%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width:520px){
+    #sectionF-title{
+        text-align: center;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+    }
+    .review{
+        width: 100%;
+        min-height: 250px;
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 30px;
+        background: linear-gradient(var(--primary-color),var(--secondary-color));
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem;
+        color: white;
+        margin:0px auto;
+        animation: .5s comeIn linear;
+        margin-bottom: 1rem;
+    }
+    .review-name{
+        width: 50%;
+        text-align: left;
+        line-height: 50px;
+        font-size: 1.3rem;
+    }
+    .review-desc{
+        width: 100%;
+        padding: .5rem 1rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: .9rem;
+    }
+    .review-points{
+        width: 90%;
+        margin: 1rem auto;
+        text-align: center;
+    }
+}

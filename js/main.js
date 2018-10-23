@@ -26,6 +26,24 @@ window.onload = function() {
   setTimeout(function(){
       alert( `Bienvenido \nEsta web esta hecha solo como practica, la informacion y contenido no tiene ninguna validez ni sentido dentro de la misma,gracias por visitarla`
       )},1000)
+  
+  //REVIEWS
+
+  revLinkOne.addEventListener('click',function(){
+    revOne.style.display='flex'
+    revTwo.style.display='none'
+    revThree.style.display='none'
+  })
+  revLinkTwo.addEventListener('click',function(){
+    revOne.style.display='none'
+    revTwo.style.display='flex'
+    revThree.style.display='none'
+  })
+  revLinkThree.addEventListener('click',function(){
+    revOne.style.display='none'
+    revTwo.style.display='none'
+    revThree.style.display='flex'
+  })
 };
 
 
@@ -41,7 +59,12 @@ var webDesing = document.querySelector("#web-desing");
 var mobile = document.querySelector("#mobile");
 var webApps = document.querySelector("#web-apps");
 var portfolios = document.querySelector("#portfolios");
-
+var revOne = document.querySelector('#rev-1')
+var revTwo = document.querySelector('#rev-2')
+var revThree = document.querySelector('#rev-3')
+var revLinkOne = document.querySelector('#rev-link1')
+var revLinkTwo = document.querySelector('#rev-link2')
+var revLinkThree = document.querySelector('#rev-link3')
 
 
 var responseOutput = function(response, i) {
