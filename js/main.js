@@ -28,8 +28,8 @@ window.onload = function() {
       )},1000)
   
   //REVIEWS
-    setInterval(showRevOne,15000)
-    setInterval(showRevTwo,18000)
+    setInterval(showRevOne,12000)
+    setInterval(showRevTwo,16000)
     setInterval(showRevThree,20000)
   revLinkOne.addEventListener('click',showRevOne)
   revLinkTwo.addEventListener('click',showRevTwo)
@@ -73,8 +73,11 @@ var revThree = document.querySelector('#rev-3')
 var revLinkOne = document.querySelector('#rev-link1')
 var revLinkTwo = document.querySelector('#rev-link2')
 var revLinkThree = document.querySelector('#rev-link3')
+var yearFooter = document.querySelector('#year-footer')
 
+var fullYear = new Date().getFullYear()
 
+yearFooter.innerHTML = fullYear
 var responseOutput = function(response, i) {
   var ouput = `<div class='img-box'>
         <img src="${response[i].img}"></img>
