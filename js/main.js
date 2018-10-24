@@ -28,25 +28,33 @@ window.onload = function() {
       )},1000)
   
   //REVIEWS
-
-  revLinkOne.addEventListener('click',function(){
-    revOne.style.display='flex'
-    revTwo.style.display='none'
-    revThree.style.display='none'
-  })
-  revLinkTwo.addEventListener('click',function(){
-    revOne.style.display='none'
-    revTwo.style.display='flex'
-    revThree.style.display='none'
-  })
-  revLinkThree.addEventListener('click',function(){
-    revOne.style.display='none'
-    revTwo.style.display='none'
-    revThree.style.display='flex'
-  })
+    setInterval(showRevOne,15000)
+    setInterval(showRevTwo,18000)
+    setInterval(showRevThree,20000)
+  revLinkOne.addEventListener('click',showRevOne)
+  revLinkTwo.addEventListener('click',showRevTwo)
+  revLinkThree.addEventListener('click',showRevThree)
 };
 
 
+var showRevOne = function(){
+  revOne.style.display='flex'
+    revTwo.style.display='none'
+    revThree.style.display='none'
+    console.log('review 1')
+}
+var showRevTwo = function(){
+  revOne.style.display='none'
+    revTwo.style.display='flex'
+    revThree.style.display='none'
+    console.log('review 2')
+}
+var showRevThree = function(){
+  revOne.style.display='none'
+    revTwo.style.display='none'
+    revThree.style.display='flex'
+    console.log('review 3')
+}
 
 
   
